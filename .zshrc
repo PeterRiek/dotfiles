@@ -13,6 +13,12 @@ source /usr/share/nvm/init-nvm.sh
 
 alias v="nvim"
 alias vv="nvim ."
+alias claude-box='docker run -it --rm \
+  -v "$(pwd)":/workspace \
+  -v "$HOME/.claude":/root/.claude \
+  -v "$HOME/.claude.json":/root/.claude.json \
+  claude-isolated'
+alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 eval "$(zoxide init zsh --cmd cd)"
 
