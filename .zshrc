@@ -19,6 +19,7 @@ alias claude-box='docker run -it --rm \
   -v "$HOME/.claude.json":/root/.claude.json \
   claude-isolated'
 alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias loadenv="set -a; source .env; set +a;"
 
 eval "$(zoxide init zsh --cmd cd)"
 

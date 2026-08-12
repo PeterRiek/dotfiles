@@ -15,7 +15,7 @@ A launcher provider plugin that allows you to quickly search the internet direct
 ## Usage
 
 1. Open the Noctalia launcher
-2. Type `>web` followed by your query to enter web search mode exclusively
+2. Type `>web` followed by your query to enter web search mode exclusively, or prefix your query with `??` for a quick top-priority search
 3. Or just type your query directly. Web search results appear as fallbacks below matched applications
 4. Live suggestions populate underneath the main result as you type
 5. Press Enter on any result to open it in your default browser
@@ -27,6 +27,12 @@ A launcher provider plugin that allows you to quickly search the internet direct
 >web chocolate cake recipe
 ```
 This bypasses all local apps/files and shows only web search results. The top result will open a search for "chocolate cake recipe" in your configured engine, with autocomplete suggestions listed below.
+
+**Quick search with `??`:**
+```
+??chocolate cake recipe
+```
+A shorter alternative to `>web`. It still runs alongside app/file results, but is boosted to the top of the list so pressing Enter immediately searches for "chocolate cake recipe".
 
 **Fallback search:**
 ```
@@ -74,6 +80,9 @@ You can configure the plugin directly via Noctalia's Plugin Settings:
 - Internet connection (for search suggestions)
 
 ## Changelog
+
+### 1.2.0
+- Added `??query` as a quick alternative to `>web query` — boosted to the top of the fallback results without needing exclusive command mode
 
 ### 1.1.1
 - Fix protocols other than http/https not recognized as URL

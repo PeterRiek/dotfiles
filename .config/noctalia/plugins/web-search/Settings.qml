@@ -29,7 +29,7 @@ ColumnLayout {
             Layout.fillWidth: true
             label: pluginApi?.tr("settings.engine.label")
             description: pluginApi?.tr("settings.engine.description")
-            model: ["Google", "DuckDuckGo", "Bing", "Brave", "Yandex"].map(function(n) {
+            model: ["Google", "DuckDuckGo", "Bing", "Brave", "Yandex", "Google AI"].map(function(n) {
                 return { key: n, name: n };
             })
             

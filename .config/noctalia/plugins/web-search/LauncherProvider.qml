@@ -71,11 +71,15 @@ Item {
     function getResults(searchText) {
         let results = [];
         let rawText = searchText.trim();
-        let isCommand = rawText.startsWith(">web");
+        let isWebCommand = rawText.startsWith(">web");
+        let isQuickSearch = !isWebCommand && rawText.startsWith("??");
+        let isCommand = isWebCommand || isQuickSearch;
         let query = rawText;
 
-        if (isCommand) {
+        if (isWebCommand) {
             query = rawText.slice(5).trim();
+        } else if (isQuickSearch) {
+            query = rawText.slice(2).trim();
         }
 
         if (query === "" && !isCommand) return [];
@@ -186,7 +190,7 @@ Item {
             "icon": "world",
             "isTablerIcon": true,
             "onActivate": function() {
-                launcher.setSearchText(">web "); 
+                launcher.setSearchText(">web ");
             }
         }];
     }
