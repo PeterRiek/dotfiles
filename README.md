@@ -19,6 +19,14 @@ dotfiles checkout
 dotfiles config status.showUntrackedFiles no
 ```
 
+Neovim config lives in its own repo, [nvim-config-real-final-final-2](https://github.com/PeterRiek/nvim-config-real-final-final-2)
+(not tracked here — nested `.git` dirs don't play well with the bare-repo
+trick) and needs to be cloned separately:
+
+```sh
+git clone git@github.com:PeterRiek/nvim-config-real-final-final-2.git ~/.config/nvim
+```
+
 If `checkout` fails because existing files would be overwritten, back them up
 and retry:
 
