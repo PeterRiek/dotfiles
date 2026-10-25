@@ -1,3 +1,3 @@
 #!/bin/bash
-qs -c noctalia-shell ipc call lockScreen lock
+noctalia msg session lock
 
