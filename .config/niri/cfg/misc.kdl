@@ -27,7 +27,6 @@
 	switch-events {
 		// Locks the screen when the lid is closed
 		lid-close {
-			// spawn "/home/peter/.config/niri/scripts/on-lid-close.sh"
 			spawn "~/.config/niri/scripts/on-lid-close.sh"
 		}
 	}
